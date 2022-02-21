@@ -20,7 +20,6 @@ export default function Login() {
     const loginWasSuccessful = auth.login(formState.email, formState.password);
 
     if (loginWasSuccessful) {
-      handleFormChange(event);
       history.replace(from.pathname);
     } else {
       setError('log in has failed, please make sure your info is correct');
